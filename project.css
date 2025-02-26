@@ -1,0 +1,80 @@
+body {
+    background-color: #eef2f7;
+}
+.event-card {
+    transition: transform 0.3s;
+    background: #fff;
+}
+.event{
+    
+    background: #aca6a8;
+}
+.event-card:hover {
+    transform: scale(1.05);
+}
+.navbar {
+    background: linear-gradient(to left, #528668,rgb(218, 202, 202), rgb(161, 72, 72));
+    padding: 15px;
+}
+.navbar-brand img {
+    height: 120px;
+    width: auto;
+}
+.nav-link {
+    color: #fff !important;
+    font-size: 18px;
+}
+footer {
+    background: linear-gradient(to left, #528668,rgb(218, 202, 202), rgb(161, 72, 72));
+    
+}
+
+
+.category-container {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.category {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    padding: 15px;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.category img {
+    width: 80px;  
+    height: 80px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 2px solid #ddd; 
+    padding: 5px; 
+    background: white; 
+   
+}
+
+
+.category p {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.category:hover {
+    transform: scale(1.1);
+    color: rgb(65, 131, 197);
+}
+.image-category-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+.category:hover {
+    background-color: #E0E7FF; 
+    border-radius: 50%;
+    padding: 10px;}

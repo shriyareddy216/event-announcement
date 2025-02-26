@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add an Event - CBIT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #eef2f7;
+        }
+        
+        h2 {
+            color: #5a189a;
+        }
+        .btn-primary {
+            width: 100%;
+            background-color: #9d6d6b;
+            border: none;
+        }
+        .btn-primary:hover {
+            background-color: rgb(154, 113, 113);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .divider {
+            margin: 20px 0;
+            border-bottom: 2px solid #ddd;
+            text-align: center;
+            font-size: 16px;
+            font-weight: bold;
+            color: #5a189a;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg" style="background: linear-gradient(to left, #205638,rgb(218, 202, 202), rgb(161, 72, 72));
+    padding: 15px;height: 150px;">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="cbittt.png" alt="CBIT Logo" height="100" width="450">
+            </a>
+            
+        </div>
+    </nav>
+     <br>
+    <div class="container">
+        <h2 class="text-center">Submit a New Event</h2>
+        <p class="text-center text-muted">Faculty & Organizers can request to add an event.</p>
+        
+        <form action="submit-event.php" method="post" enctype="multipart/form-data">
+
+            <div class="divider">Organizer Details</div>
+
+            <div class="mb-3">
+                <label for="organizer" class="form-label">Organizer Name</label>
+                <input type="text" class="form-control" id="organizer" name="organizer"  required>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Organizer Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="example@cbit.com" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="phone" class="form-label">Contact Number</label>
+                <input type="text" class="form-control" id="phone" name="phone"  required>
+            </div>
+
+            <div class="divider">Event Details</div>
+
+            <div class="mb-3">
+                <label for="event_name" class="form-label">Event Name</label>
+                <input type="text" class="form-control" id="event_name" name="event_name"  required>
+            </div>
+
+            <div class="mb-3">
+                <label for="event_date" class="form-label">Event Date</label>
+                <input type="date" class="form-control" id="event_date" name="event_date" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="event_type" class="form-label">Event Type</label>
+                <select class="form-select" id="event_type" name="event_type" required>
+                    <option value="Cultural">Cultural</option>
+                    <option value="Technical">Technical</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Workshop">Workshop</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="event_desc" class="form-label">Event Description</label>
+                <textarea class="form-control" id="event_desc" name="event_desc" rows="3" placeholder="Briefly describe the event..." required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="event_location" class="form-label">Event Location</label>
+                <input type="text" class="form-control" id="event_location" name="event_location" required>
+            </div>
+
+            <div class="divider">Event Poster</div>
+
+            <div class="mb-3">
+                <label for="event_image" class="form-label">Upload Event Poster (JPG/PNG)</label>
+                <input type="file" class="form-control" id="event_image" name="event_image" accept="image/png, image/jpeg" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit Event Request</button>
+        </form>
+    </div>
+
+    <footer class="text-center py-3 mt-4" style="background: linear-gradient(to left, #205638,rgb(218, 202, 202), rgb(161, 72, 72));">
+        &copy; 2025 CBIT Events. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

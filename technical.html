@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Events</title>
+    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: #f4f4f4;
+            padding: 10px;
+            text-align: left;
+            font-size: 18px;
+        }
+
+        /* Banner Section */
+        .banner {
+            display: flex;
+            background-color: #1e0a3c;
+            color: rgb(215, 120, 238);
+            padding-left: 40px;
+            align-items: center;
+        }
+
+        .banner-text {
+            flex: 1;
+        }
+
+        .banner-image img {
+        
+            width: 500px; 
+            height: 250px;
+        }
+
+        /* Filters */
+        .filters {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .filters select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .event-card {
+            transition: transform 0.3s;
+            background: #fff;
+        }
+        
+       
+        .event-card:hover {
+            transform: scale(1.05);
+        }
+        .event-card {
+          transition: transform 0.3s;
+          background: #fff;
+           width: 100%;
+           max-width: 350px; /* Controls card width */
+           border-radius: 15px;
+           overflow: hidden;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         }
+
+         .event-card img {
+           width: 100%;
+           max-height: 200px; 
+           object-fit: cover; 
+           border-radius: 10px;
+        }           
+        .navbar {
+            background: white;
+    
+        }
+         .navbar-brand img {
+            padding: 0;
+        }
+        .event{
+            background: #aca6a8;
+            }
+        footer {
+            background-color: #1e0a3c;
+        }
+</style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md" >
+        <div class="container" >
+            <a class="navbar-brand" href="#home">
+                <img src="cbittt.png" alt="CBIT Logo" height="70" width="200" > 
+            </a>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <a class="navbar-brand" href="#home"></a>
+                <input type="text" id="searchBar" class="form-control w-50" placeholder="Search events...">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="add.html">Add Event</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cal.html">Calendar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="banner-text">
+            <h1><strong> Technical Events </strong></h1>
+            <h6 style="color: rgb(69, 137, 137);"> in CBIT </h6>
+            <p>Explore the best technical events happening around you!</p>
+        </div>
+        <div class="banner-image">
+            <img src="technical-banner.jpg" alt="Cultural Event">
+        </div>
+    </section>
+
+    <!-- Event Filters -->
+    <div class="filters">
+        
+        <select>
+            <option>Date</option>
+            <option>Upcoming</option>
+            <option>Past</option>
+        </select>
+    </div>
+
+    <!-- Events List -->
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card event-card">
+                    <img src="SUDHEE.png" class="card-img-top" alt="Hackathon">
+                    <div class="card-body">
+                        <h5 class="card-title">TECHNICAL FEST</h5>
+                        <p class="card-text">The Chaitanya Bharathi Institute of Technology proudly announces SUDHEE – 2025, “VIGYAN KAUSHALAM”: a students’ national technical fest. We’ve tweaked the classical events and spiced it up to add a modern twist. Be ready to compete and become the cream of the crop, because you know that CBIT students bring it! This year we take up the mission of finding more solutions to the everyday challenges posed by the IT world around us. We come back with renewed energy, fresh spirits and charged minds and we are ready to break boundaries and enter new Frontiers! </p>
+                        <p><strong>Time:</strong> March 4, 2025 | 10:00 AM</p>
+                        <p><strong>Location:</strong> CBIT campus</p>
+                        <details>
+                            <summary class="btn btn-primary">Register Now</summary>
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="roll">Roll number</label>
+                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="branch">Branch</label>
+                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block">Submit</button>
+                            </form>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card event-card">
+                    <img src="headstart.jpg" class="card-img-top" alt="headstart">
+                    <div class="card-body">
+                        <h5 class="card-title">Headstart CSE</h5>
+                        <p class="card-text">The Computer Science and Engineering department (CSE) of CBIT Commenced their Annual Technical Fest SUDHEE 2025 with its theme being “INNOVATE, INTEGRATE, INSPIRE”, for their flagship event HEADSTART 2025.
+                            HEADSTART is the two-day National-Level Technical Fest of CSE Department organized under the umbrella of Sudhee, the Technical Fest of CBIT.</p>
+                        <p><strong>Time:</strong> March 4 - 5, 2025 | 10:00 AM</p>
+                        <p><strong>Location:</strong> C BLOCK</p>
+                        <details>
+                            <summary class="btn btn-primary">Register Now</summary>
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="roll">Roll number</label>
+                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="branch">Branch</label>
+                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block">Submit</button>
+                            </form>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card event-card">
+                    <img src="TEC.png" class="card-img-top" alt="headstart">
+                    <div class="card-body">
+                        <h5 class="card-title">TECSTACY IT</h5>
+                        <p class="card-text">The Information Technology department (IT) of CBIT Commenced their Annual Technical Fest SUDHEE 2025 for their flagship event TECSTACY 2025.
+                            TECSTACY is the two-day National-Level Technical Fest of IT Department organized under the umbrella of Sudhee, the Technical Fest of CBIT.
+                            </p>
+                        <p><strong>Time:</strong> March 4 - 5, 2025 | 10:00 AM</p>
+                        <p><strong>Location:</strong> L BLOCK</p>
+                        <details>
+                            <summary class="btn btn-primary">Register Now</summary>
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="roll">Roll number</label>
+                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="branch">Branch</label>
+                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block">Submit</button>
+                            </form>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card event-card">
+                    <img src="SYNAPSE.jpg" class="card-img-top" alt="headstart">
+                    <div class="card-body">
+                        <h5 class="card-title">SYNAPSE ECE</h5>
+                        <p class="card-text">The Electronics and Communication Engineering department (ECE) of CBIT Commenced their Annual Technical Fest SUDHEE 2025 for their flagship event SYNAPSE 2025.
+                            SYNAPSE is the two-day National-Level Technical Fest of ECE Department organized under the umbrella of Sudhee, the Technical Fest of CBIT.
+                            </p>
+                        <p><strong>Time:</strong> March 4 - 5, 2025 | 10:00 AM</p>
+                        <p><strong>Location:</strong> N BLOCK</p>
+                        <details>
+                            <summary class="btn btn-primary">Register Now</summary>
+                            <form>
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="roll">Roll number</label>
+                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="branch">Branch</label>
+                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
+                                </div>
+                                <button type="submit" class="btn btn-success btn-block">Submit</button>
+                            </form>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div  class="card event" >
+    <div class="container mt-4" id="contact">
+        <h2 class="text-center">Contact Us</h2>
+        <p class="text-center">Reach out for any event-related queries.</p>
+        <p><strong>Phone:</strong> +91 9876543210</p>
+        <p><strong>Email:</strong> contact@cbitevents.com</p>
+    </div>
+    </div>
+    <footer class="text-white text-center py-3 mt-4">
+        &copy; 2025 CBIT Events. All Rights Reserved.
+    </footer>
+    
+
+</body>
+</html>
