@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technical Events</title>
     
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         /* General Styles */
         body {
@@ -95,6 +94,11 @@
         footer {
             background-color: #1e0a3c;
         }
+          /* Success Message */
+          .alert-success {
+            display: none;
+            margin-top: 10px;
+        }
 </style>
 </head>
 <body>
@@ -112,8 +116,8 @@
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="index.html">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="add.html">Add Event</a></li>
                     <li class="nav-item"><a class="nav-link" href="cal.html">Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
                 </ul>
             </div>
         </div>
@@ -151,28 +155,9 @@
                         <p class="card-text">The Chaitanya Bharathi Institute of Technology proudly announces SUDHEE – 2025, “VIGYAN KAUSHALAM”: a students’ national technical fest. We’ve tweaked the classical events and spiced it up to add a modern twist. Be ready to compete and become the cream of the crop, because you know that CBIT students bring it! This year we take up the mission of finding more solutions to the everyday challenges posed by the IT world around us. We come back with renewed energy, fresh spirits and charged minds and we are ready to break boundaries and enter new Frontiers! </p>
                         <p><strong>Time:</strong> March 4, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> CBIT campus</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
@@ -185,28 +170,9 @@
                             HEADSTART is the two-day National-Level Technical Fest of CSE Department organized under the umbrella of Sudhee, the Technical Fest of CBIT.</p>
                         <p><strong>Time:</strong> March 4 - 5, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> C BLOCK</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
@@ -220,28 +186,9 @@
                             </p>
                         <p><strong>Time:</strong> March 4 - 5, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> L BLOCK</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
@@ -255,28 +202,9 @@
                             </p>
                         <p><strong>Time:</strong> March 4 - 5, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> N BLOCK</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
@@ -284,6 +212,43 @@
     </div>
     <br>
     <br>
+     <!-- Registration Modal (Popup) -->
+     <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Event Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="roll" class="form-label">Roll Number</label>
+                            <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="branch" class="form-label">Branch</label>
+                            <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Submit</button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="alert alert-success" id="successMessage">
+                        ✅ Registration submitted successfully!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div  class="card event" >
     <div class="container mt-4" id="contact">
         <h2 class="text-center">Contact Us</h2>
@@ -295,7 +260,26 @@
     <footer class="text-white text-center py-3 mt-4">
         &copy; 2025 CBIT Events. All Rights Reserved.
     </footer>
-    
+     <!-- JavaScript -->
+     <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page refresh
+            
+            // Show success message
+            document.getElementById("successMessage").style.display = "block";
+
+            // Clear form fields
+            document.getElementById("registerForm").reset();
+
+            // Hide modal after 2 seconds
+            setTimeout(() => {
+                document.getElementById("successMessage").style.display = "none";
+                var modal = bootstrap.Modal.getInstance(document.getElementById("registerModal"));
+                modal.hide();
+            }, 2000);
+        });
+    </script>
+
 
 </body>
 </html>

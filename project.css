@@ -5,10 +5,14 @@ body {
     transition: transform 0.3s;
     background: #fff;
 }
-.event{
-    
-    background: #aca6a8;
+.event {
+    background: #fff; /* Change from #aca6a8 to white */
 }
+.events {
+    background: #aca6a8; 
+}
+
+
 .event-card:hover {
     transform: scale(1.05);
 }
@@ -78,3 +82,20 @@ footer {
     background-color: #E0E7FF; 
     border-radius: 50%;
     padding: 10px;}
+
+      /* Success Message */
+      .alert-success {
+        display: none;
+        margin-top: 10px;
+    }
+
+    .event-card {
+        display: none; /* Initially hide all events */
+    }
+    .event-card.show {
+        display: block; /* Show only filtered events */
+    }
+    .event-card {
+        display: block;
+    }
+    

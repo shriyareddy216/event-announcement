@@ -6,6 +6,7 @@
     <title>CBIT Events & Announcements</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="project.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
@@ -19,8 +20,9 @@
                     <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="add.html">Add Event</a></li>
                     <li class="nav-item"><a class="nav-link" href="cal.html">Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    
                 </ul>
             </div>
         </div>
@@ -64,17 +66,18 @@
         <div class="row">
          <!-- Filter Links -->
          <div class="text-center mb-4">
-            <a href="#all" class="btn btn-primary filter-btn">All</a>
-            <a href="#cultural" class="btn btn-primary filter-btn">Cultural</a>
-            <a href="#technical" class="btn btn-primary filter-btn">Technical</a>
-            <a href="#sports" class="btn btn-primary filter-btn">Sports</a>
-            <a href="#workshops" class="btn btn-primary filter-btn">Workshops</a>
+            <a href="#" class="btn btn-primary filter-btn" data-filter="all">All</a>
+<a href="#" class="btn btn-primary filter-btn" data-filter="cultural">Cultural</a>
+<a href="#" class="btn btn-primary filter-btn" data-filter="technical">Technical</a>
+<a href="#" class="btn btn-primary filter-btn" data-filter="sports">Sports</a>
+<a href="#" class="btn btn-primary filter-btn" data-filter="workshop">Workshops</a>
+
         </div>
         
             
             
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card cultural show">
                     <img src="shruthi.png" class="card-img-top" alt="Shruthi Fest">
                     <div class="card-body">
                         <h5 class="card-title">CBIT Fest</h5>
@@ -82,34 +85,15 @@
                             Chaitanya Bharathi Institute of Technology proudly announces Shruthi-2025, “HALCYON”: The Ultimate Celebration of Innovation, Talent, and Unity, a students’ cultural fest from 06-08 March 2025. With the theme “HALCYON”, inspired by the idea of peaceful serenity and timeless excellence, promises to be a grand, immersive experience showcasing the incredible talents of our student community, set against a backdrop of academic brilliance. With thousands of enthusiastic students, faculty members, alumni, and guests in attendance, </p>
                             <p><strong>Time:</strong> March 6, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> CBIT campus</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card technical event">
                     <img src="SUDHEE.png" class="card-img-top" alt="Hackathon">
                     <div class="card-body">
                         <h5 class="card-title">TECHNICAL FEST</h5>
@@ -117,67 +101,29 @@
                         
                         <p><strong>Time:</strong> March 4, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> CBIT campus</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
             
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card sports event">
                     <img src="auraaa.png" class="card-img-top" alt="Aura Fest">
                     <div class="card-body">
                         <h5 class="card-title">Aura Sports Fest</h5>
                         <p class="card-text">The prestigious national sports tournament organized by Chaitanya Kreeda, attracts participation from top universities and colleges across India. With a wide range of events in various sports, AURA'25 emphasizes not only competition but also sportsmanship, unity, and excellence, making it one of the most eagerly anticipated events in the student community.</p>
                         <p><strong>Time:</strong> March 26, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> CBIT campus</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card cultural event">
                     <img src="locked.jpg" class="card-img-top" alt="Hackathon">
                     <div class="card-body">
                         <h5 class="card-title">LOCKED 2.0</h5>
@@ -196,33 +142,14 @@
                             Team of 3-4: ₹ 77.</p>
                             <p><strong>Time:</strong> March 7, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> N block</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card workshop event">
                     <img src="workshopp.jpg" class="card-img-top" alt="Hackathon">
                     <div class="card-body">
                         <h5 class="card-title">ETHICAL HACKING WORKSHOP</h5>
@@ -236,33 +163,14 @@
                             
                             <p><strong>Time:</strong> 20th and 21st of Feb, 2025</p>
                         <p><strong>Location:</strong> N block</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card workshop event">
                     <img src="girlhack.jpg" class="card-img-top" alt="Hackathon">
                     <div class="card-body">
                         <h5 class="card-title"> GIRL Hackathon 2025</h5>
@@ -277,33 +185,14 @@
                             
                             <p><strong>Time:</strong> Feb 26, 2025 | 10:00 AM</p>
                             <p><strong>Location:</strong> L BLOCK </p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card technical event">
                     <img src="headstart.jpg" class="card-img-top" alt="headstart">
                     <div class="card-body">
                         <h5 class="card-title">Headstart CSE</h5>
@@ -311,33 +200,14 @@
                             HEADSTART is the two-day National-Level Technical Fest of CSE Department organized under the umbrella of Sudhee, the Technical Fest of CBIT.</p>
                         <p><strong>Time:</strong> March 4 - 5, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> C BLOCK</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card technical event">
                     <img src="TEC.png" class="card-img-top" alt="headstart">
                     <div class="card-body">
                         <h5 class="card-title">TECSTACY IT</h5>
@@ -346,33 +216,14 @@
                             </p>
                         <p><strong>Time:</strong> March 4 - 5, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> L BLOCK</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card technical event">
                     <img src="SYNAPSE.jpg" class="card-img-top" alt="headstart">
                     <div class="card-body">
                         <h5 class="card-title">SYNAPSE ECE</h5>
@@ -381,33 +232,14 @@
                             </p>
                         <p><strong>Time:</strong> March 4 - 5, 2025 | 10:00 AM</p>
                         <p><strong>Location:</strong> N BLOCK</p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card event-card">
+                <div class="card event-card cultural event">
                     <img src="HUNT.jpg" class="card-img-top" alt="Hunt">
                     <div class="card-body">
                         <h5 class="card-title"> HUNT IT OUT CHAPTER 4</h5>
@@ -421,28 +253,9 @@
                             
                             <p><strong>Time:</strong> MARCH 6 & 7, 2025 | 10:00 AM</p>
                             <p><strong>Location:</strong> C BLOCK </p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
@@ -461,28 +274,9 @@
                             
                             <p><strong>Time:</strong> 27th February  2025 | 1:00 PM</p>
                             <p><strong>Location:</strong> D BLOCK seminar hall </p>
-                        <details>
-                            <summary class="btn btn-primary">Register Now</summary>
-                            <form>
-                                <div class="form-group">
-                                    <label for="name">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">Email Address</label>
-                                    <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="roll">Roll number</label>
-                                    <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="branch">Branch</label>
-                                    <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
-                                </div>
-                                <button type="submit" class="btn btn-success btn-block">Submit</button>
-                            </form>
-                        </details>
+                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+                            Register Now
+                        </button>
                     </div>
                 </div>
             </div>
@@ -491,7 +285,44 @@
     </div>
     <br>
     <br>
-    <div  class="card event" >
+      <!-- Registration Modal (Popup) -->
+      <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="registerModalLabel">Event Registration</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="roll" class="form-label">Roll Number</label>
+                            <input type="number" class="form-control" id="roll" placeholder="Enter your Roll Number" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="branch" class="form-label">Branch</label>
+                            <input type="text" class="form-control" id="branch" placeholder="Enter your Branch Name" required>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Submit</button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="alert alert-success" id="successMessage">
+                        ✅ Registration submitted successfully!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div  class="card events" >
     <div class="container mt-4" id="contact">
         <h2 class="text-center">Contact Us</h2>
         <p class="text-center">Reach out for any event-related queries.</p>
@@ -502,5 +333,49 @@
     <footer class="text-white text-center py-3 mt-4">
         &copy; 2025 CBIT Events. All Rights Reserved.
     </footer>
+     <!-- JavaScript -->
+     <script>
+        document.getElementById("registerForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent page refresh
+            
+            // Show success message
+            document.getElementById("successMessage").style.display = "block";
+
+            // Clear form fields
+            document.getElementById("registerForm").reset();
+
+            // Hide modal after 2 seconds
+            setTimeout(() => {
+                document.getElementById("successMessage").style.display = "none";
+                var modal = bootstrap.Modal.getInstance(document.getElementById("registerModal"));
+                modal.hide();
+            }, 2000);
+        });
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const eventCards = document.querySelectorAll(".event-card");
+
+    filterButtons.forEach(button => {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            const filter = this.getAttribute("data-filter");
+
+            eventCards.forEach(card => {
+                if (filter === "all" || card.classList.contains(filter)) {
+                    card.style.display = "block"; // Show the event
+                } else {
+                    card.style.display = "none"; // Hide the event
+                }
+            });
+        });
+    });
+});
+
+
+    </script>
+
+
 </body>
 </html>
